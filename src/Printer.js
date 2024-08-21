@@ -2,7 +2,8 @@
 exports.__esModule = true;
 var fs = require("fs");
 var path = require("path");
-var filePath = "/home/user/Desktop/Node/DirectoryAndFilePrinter/node_modules";
+var fileRelativePath = "../node_modules";
+var filePath = path.join(__dirname, fileRelativePath);
 var isDirectory = function (fsPath) {
     var stats = fs.statSync(fsPath);
     return stats.isDirectory();
