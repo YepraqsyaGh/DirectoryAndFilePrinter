@@ -1,8 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const fileRelativePath = "../node_modules"
-const filePath: string = path.join(__dirname, fileRelativePath);
+const filePath: string = path.resolve(__dirname, '..', 'node_modules');
 
 const isDirectory = (fsPath: string): boolean | undefined => {
     const stats = fs.statSync(fsPath);
